@@ -3,9 +3,9 @@ class ApiError extends Error {
         statusCode,
         message = "Something went wrong",
         errors = [],
-        stack = ""
+        stack = "" 
     ){
-        super(message)
+        super(message) // Calling the parent Error class's constructor with the message
         this.statusCode = statusCode,
         this.data = null,
         this.message = message,
