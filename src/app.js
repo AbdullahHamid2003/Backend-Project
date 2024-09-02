@@ -15,4 +15,11 @@ app.use(express.urlencoded({extended: true, limit: "16kb"})) //Handles form subm
 app.use(express.static("public"))  //to save some files or images on our own server.
 app.use(cookieParser())  //to access and use cookies of user browser from server. 
 
+
+//routes import 
+import userRouter from "./routes/user.routes.js"
+
+//router declaration
+app.use("/api/v1/users", userRouter)
+
 export default app 
